@@ -1,0 +1,38 @@
+.contact-container {
+  background: rgba(46, 125, 50, 0.1); /* soft green tint */
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px); /* optional frosted effect */
+}
+
+.contact-heading {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-size: 2rem;
+  color: #2e7d32;
+}
+
+.leaf-icon {
+  height: 70px;               /* Half the previous size */
+  display: inline-block;
+  animation: spin 6s linear infinite;
+}
+
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.contact-form .form-control {
+  border: 2px solid #81c784;
+  transition: 0.3s ease;
+  background-color: #ffffffdd;
+}
+
+.contact-form .form-control:focus {
+  border-color: #388e3c;
+  box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+}
