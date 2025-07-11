@@ -1,0 +1,22 @@
+/* src/styles/About.css */
+.about-page {
+  background: #f0fff4;
+  border-radius: 12px;
+}
+
+.cartoon-leaf {
+  animation: spin 6s linear infinite;
+  filter: drop-shadow(0 0 6px #8fbc8f);
+}
+
+.about-card {
+  background: #ffffffdd;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 128, 0, 0.1);
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
