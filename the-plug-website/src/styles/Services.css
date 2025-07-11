@@ -12,6 +12,7 @@
   color: #a7f3d0;
   margin-bottom: 1rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .services-section p.fw-bold {
@@ -20,6 +21,7 @@
   color: #34d399;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  text-align: center;
 }
 
 /* Service Card Layout */
@@ -37,6 +39,7 @@
   transition: box-shadow 0.3s ease;
   animation: fadeInSlide 0.8s ease-out both;
   --slide-count: 3;
+  gap: 1rem;
 }
 
 .service-card:nth-child(odd) {
@@ -56,11 +59,11 @@
 
 /* Image Section */
 .service-carousel {
-  flex: 1;
+  flex: 1 1 300px;
   max-width: 480px;
   overflow: hidden;
   border-radius: 0.75rem;
-  margin: 1rem;
+  margin: auto;
 }
 
 .carousel {
@@ -79,7 +82,7 @@
 
 /* Text Section */
 .service-text {
-  flex: 1;
+  flex: 1 1 300px;
   padding: 1rem;
 }
 
@@ -98,18 +101,10 @@
 
 /* Carousel Slide Animation */
 @keyframes slideImages {
-  0%, 25% {
-    transform: translateX(0%);
-  }
-  30%, 55% {
-    transform: translateX(-100%);
-  }
-  60%, 85% {
-    transform: translateX(-200%);
-  }
-  90%, 100% {
-    transform: translateX(0%);
-  }
+  0%, 25% { transform: translateX(0%); }
+  30%, 55% { transform: translateX(-100%); }
+  60%, 85% { transform: translateX(-200%); }
+  90%, 100% { transform: translateX(0%); }
 }
 
 /* Entry Animation */
@@ -147,11 +142,16 @@
   50% { transform: scale(1.1); opacity: 1; }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive Enhancements */
+@media (max-width: 992px) {
   .service-card,
   .service-card.reverse {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .service-text {
+    padding: 0.5rem;
   }
 
   .service-carousel {
@@ -159,10 +159,32 @@
   }
 
   .services-section h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .service-text h5 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+  }
+
+  .service-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-section {
+    padding: 2rem 1rem;
+  }
+
+  .service-card {
+    padding: 1.25rem;
+  }
+
+  .service-text h5 {
+    font-size: 1.1rem;
+  }
+
+  .services-section h3 {
+    font-size: 1.5rem;
   }
 }
