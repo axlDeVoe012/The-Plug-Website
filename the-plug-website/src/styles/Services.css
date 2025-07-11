@@ -1,0 +1,168 @@
+/* Services.css — Dark Green Corporate Style */
+
+.services-section {
+  background-color: #022c22;
+  padding: 4rem 1rem;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  color: #f0fef4;
+}
+
+.services-section h3 {
+  font-size: 2.25rem;
+  color: #a7f3d0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.services-section p.fw-bold {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #34d399;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Service Card Layout */
+.service-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: #0f2f25;
+  border: 1px solid #14532d;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 80, 40, 0.1);
+  transition: box-shadow 0.3s ease;
+  animation: fadeInSlide 0.8s ease-out both;
+  --slide-count: 3;
+}
+
+.service-card:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+.service-card:nth-child(even) {
+  animation-delay: 0.4s;
+}
+
+.service-card:hover {
+  box-shadow: 0 6px 24px rgba(0, 128, 0, 0.2);
+}
+
+.service-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image Section */
+.service-carousel {
+  flex: 1;
+  max-width: 480px;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  margin: 1rem;
+}
+
+.carousel {
+  display: flex;
+  animation: slideImages calc(var(--slide-count) * 3s) infinite ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  transition: transform 0.4s ease;
+}
+
+/* Text Section */
+.service-text {
+  flex: 1;
+  padding: 1rem;
+}
+
+.service-text h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #bbf7d0;
+}
+
+.service-text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #d1fae5;
+}
+
+/* Carousel Slide Animation */
+@keyframes slideImages {
+  0%, 25% {
+    transform: translateX(0%);
+  }
+  30%, 55% {
+    transform: translateX(-100%);
+  }
+  60%, 85% {
+    transform: translateX(-200%);
+  }
+  90%, 100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Entry Animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Coming Soon Card */
+.coming-soon-card {
+  border-left: 4px solid #f87171;
+  background-color: #1c2b25;
+}
+
+.coming-soon-tag {
+  font-size: 0.85rem;
+  background: #f87171;
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  margin-left: 0.6rem;
+  font-weight: 600;
+  animation: pulse 1.5s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-card,
+  .service-card.reverse {
+    flex-direction: column;
+  }
+
+  .service-carousel {
+    max-width: 100%;
+  }
+
+  .services-section h3 {
+    font-size: 1.8rem;
+  }
+
+  .service-text h5 {
+    font-size: 1.2rem;
+  }
+}
