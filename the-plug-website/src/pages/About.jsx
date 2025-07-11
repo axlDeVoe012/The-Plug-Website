@@ -1,10 +1,11 @@
-import leaf from '../assets/leaf.png'; // Optional cartoon-style cannabis leaf
+import React from 'react';
+import logo from '../assets/logo.jpg';  // Your logo image path
 import './About.css';
 
 const About = () => (
-  <div className="container py-4">
+  <div className="about-container py-4">
     <div className="text-center mb-4">
-      <img src={leaf} alt="Leaf" height="60" className="mb-2" />
+      <img src={logo} alt="Logo" className="animated-leaf" />
       <h1 className="mb-1">🌿 About The Plug</h1>
       <p className="text-muted">High quality cannabis. Township-rooted. Community-driven.</p>
     </div>
@@ -12,8 +13,8 @@ const About = () => (
     <section className="mb-4">
       <h4>📍 Founder Information</h4>
       <p>
-        <strong>Rethabile Moloi</strong> (aka <em>The Witch</em>)<br/>
-        📞 072-061-5124<br/>
+        <strong>Rethabile Moloi</strong> (aka <em>The Witch</em>)<br />
+        📞 072-061-5124<br />
         🏠 20511 Tugela & Indus Street, Protea Glen Ext 20, Soweto
       </p>
     </section>
