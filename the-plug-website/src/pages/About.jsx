@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../assets/logo.jpg';  // Your logo image path
-import './About.css';
+import '../styles/About.css';
 
 const About = () => (
   <div className="about-container py-4">

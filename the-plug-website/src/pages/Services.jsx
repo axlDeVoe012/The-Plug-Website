@@ -1,5 +1,5 @@
 import React from 'react';
-import './Services.css';
+import '../styles/Services.css';
 
 // Car Wash Images
 import car1 from '../assets/products/gti.png';

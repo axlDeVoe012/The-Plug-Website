@@ -1,4 +1,4 @@
-import './Home.css';
+import '../styles/Home.css';
 import landingImage from '../assets/landing.svg';
 
 const Home = () => (
