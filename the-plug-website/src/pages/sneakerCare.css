@@ -1,0 +1,79 @@
+/* SneakerCare.css - Watery Theme */
+
+.sneaker-care-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #dbeafe, #e0f2fe, #f0f9ff);
+  color: #0c4a6e;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Optional: light water ripple background */
+.sneaker-care-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/water-ripples.png') no-repeat center center / cover;
+  opacity: 0.05;
+  z-index: -1;
+}
+
+.sneaker-care-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: #0ea5e9;
+  margin-bottom: 1rem;
+}
+
+.sneaker-care-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #0369a1;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Grid layout */
+.sneaker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Glassy Card */
+.sneaker-card {
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 150, 255, 0.15);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0, 100, 200, 0.15);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sneaker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 40px rgba(0, 100, 200, 0.25);
+}
+
+/* Card text */
+.sneaker-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0284c7;
+  margin-bottom: 0.5rem;
+}
+
+.sneaker-card p {
+  font-size: 1rem;
+  color: #0f172a;
+  line-height: 1.6;
+}

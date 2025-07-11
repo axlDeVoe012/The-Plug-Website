@@ -1,0 +1,70 @@
+/* Education.css */
+
+.education-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #064e3b, #000);
+  color: #e6ffe6;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Optional: Soft background cannabis image */
+.education-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('/images/cannabis-bg.jpg') no-repeat center center / cover;
+  opacity: 0.07;
+  z-index: -1;
+}
+
+.education-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: #bbf7d0;
+  margin-bottom: 1rem;
+}
+
+.education-subtitle {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #cbd5e1;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.25rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.education-card h2 {
+  font-size: 1.75rem;
+  color: #86efac;
+  margin-bottom: 0.5rem;
+}
+
+.education-card p {
+  color: #d1fae5;
+  line-height: 1.6;
+  font-size: 1rem;
+}
