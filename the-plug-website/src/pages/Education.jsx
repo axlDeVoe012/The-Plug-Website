@@ -1,4 +1,4 @@
-import './Education.css';
+import '../styles/Education.css';
 
 const Education = () => (
   <div className="education-container">

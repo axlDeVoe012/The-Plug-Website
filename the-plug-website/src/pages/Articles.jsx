@@ -1,4 +1,4 @@
-import './Articles.css';
+import '../styles/Articles.css';
 
 const Articles = () => (
   <div className="articles-container">

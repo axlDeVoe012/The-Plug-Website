@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import './home.css'; // Add this for custom animation styles
-import landingImage from '../assets/landing.png'; // Place your image in src/assets
-=======
+
 import '../styles/Home.css';
 import landingImage from '../assets/landing.svg';
->>>>>>> ea0d7940fb2d31fedaa7c2f127be087bf9aad517
 
 const Home = () => (
   <div

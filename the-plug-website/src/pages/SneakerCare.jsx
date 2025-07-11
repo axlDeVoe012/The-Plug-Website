@@ -1,4 +1,4 @@
-import './SneakerCare.css';
+import '../styles/SneakerCare.css';
 
 const SneakerCare = () => (
   <div className="sneaker-care-container">
