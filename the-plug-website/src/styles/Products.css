@@ -1,134 +1,86 @@
-/* Products.css */
-
-/* Body and container */
-body, html {
-  background-color: #121212; /* Dark background */
-  color: #d0f0c0; /* Soft greenish text */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-/* Container padding */
-.container {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-/* Product cards styling */
-.product-card {
-  background: #1e2a1f; /* Dark greenish background */
-  border-radius: 12px;
-  border: 2px solid transparent;
-  transition: transform 0.3s ease, box-shadow 0.4s ease, border-color 0.3s ease;
-  box-shadow:
-    inset 0 0 15px #14421444; /* subtle inner glow */
-}
-
-.product-card:hover {
-  cursor: pointer;
-  transform: scale(1.06);
-  border-color: #28a745; /* Bootstrap green */
-  box-shadow:
-    0 0 12px 3px #28a745cc,
-    0 0 25px 6px #28a745aa,
-    inset 0 0 20px #28a74566; /* bright inner green glow */
-}
-
-/* Card image */
-.card-img-top {
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover .card-img-top {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-/* Card body */
-.card-body {
-  padding: 1rem 1rem 1.25rem;
-}
-
-/* Card title */
-.card-title {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: #a6d785;
-  margin-bottom: 0.3rem;
-  text-shadow: 0 0 3px #2f6f18aa;
-}
-
-/* Card price */
-.card-text {
-  color: #28a745;
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.03em;
-}
-
-/* Modal backdrop override */
-.modal-backdrop.show {
-  background-color: rgba(20, 50, 10, 0.9) !important;
-}
-
-/* Modal content */
-.modal-content {
-  background-color: #121b12 !important;
-  border-radius: 1rem !important;
-  border: 2px solid #28a745;
-  box-shadow:
-    0 0 10px #28a745cc,
-    0 0 25px 6px #28a745aa;
-}
-
-/* Modal header */
-.modal-header {
-  border-bottom: none !important;
-  padding-bottom: 0.25rem;
-}
-
-/* Modal title */
-.modal-title {
-  color: #28a745 !important;
-  font-weight: 800;
-  font-size: 1.6rem;
-  text-shadow: 0 0 8px #28a745aa;
-}
-
-/* Close button */
-.btn-close-white {
-  filter: invert(1) brightness(2) contrast(1.2);
-}
-
-/* Modal images */
-.modal-body img {
-  border-radius: 10px;
-  border: 2px solid #28a745;
-  box-shadow: 0 0 12px #28a745bb;
-  transition: transform 0.3s ease;
-}
-
-.modal-body img:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-}
-
-/* Modal body scroll */
-.modal-body {
-  max-height: 70vh;
-  overflow-y: auto;
+/* Hover overlay logic */
+.hover-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* subtle dark overlay */
+  color: #e6f4ea;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   padding: 1rem;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
 }
 
-/* Responsive fixes */
-@media (max-width: 768px) {
-  .product-card {
-    margin-bottom: 1rem;
-  }
-  .modal-dialog {
-    max-width: 90vw;
-  }
+.card:hover .hover-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Image zoom on hover */
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Floating price tag */
+.floating-price {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  color: #000000;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-top-left-radius: 0.5rem;
+  z-index: 3;
+  user-select: none;
+}
+
+/* Red style for "Coming Soon" price */
+.floating-price.coming-soon {
+  color: #ff4d4d; /* bright red text */
+  background-color: rgba(255, 0, 0, 0.15); /* subtle red bg */
+  font-weight: 700;
+}
+
+/* Button animation */
+.animate-btn {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.animate-btn:hover {
+  transform: scale(1.05);
+  background-color: #7af0bb;
+  color: #142d1a;
+  border-color: #7af0bb;
+}
+
+/* Dark Mode Support */
+body.dark-mode {
+  background-color: #0a1f14;
+  color: #e6f4ea;
+}
+
+body.dark-mode .card {
+  background-color: #142d1a !important;
+  color: #e6f4ea;
+}
+
+body.dark-mode .btn-outline-success {
+  border-color: #7af0bb;
+  color: #7af0bb;
+}
+
+body.dark-mode .btn-outline-success:hover {
+  background-color: #7af0bb;
+  color: #142d1a;
 }
