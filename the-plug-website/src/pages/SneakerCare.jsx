@@ -1,42 +1,81 @@
+import { useState, useEffect } from 'react';
 import '../styles/SneakerCare.css';
+import sneaker1 from '../assets/products/sneaker1.png';
+import sneaker2 from '../assets/products/sneaker2.png';
+import sneaker3 from '../assets/products/sneaker3.png';
 
-const SneakerCare = () => (
-  <div className="sneaker-care-container">
-    <h1 className="sneaker-care-title">Sneaker Care</h1>
-    <p className="sneaker-care-subtitle">
-      We offer premium sneaker cleaning, restoration, and protection services to keep your kicks fresh, sharp, and long-lasting.
-    </p>
+const images = [
+  {
+    src: sneaker1,
+    title: "Deep Cleaning",
+    caption: "Sneaker-safe deep clean with water-based foam.",
+  },
+  {
+    src: sneaker2,
+    title: "Fresh & Protected",
+    caption: "Waterproof finish that keeps your kicks fresh.",
+  },
+  {
+    src: sneaker3,
+    title: "Splash Finish",
+    caption: "Final rinse and hand-dry for that brand-new feel.",
+  },
+];
 
-    <div className="sneaker-grid">
-      <div className="sneaker-card">
-        <h2>Deep Cleaning</h2>
-        <p>
-          Full outsole scrub, midsole whitening, lace refresh, and upper detailing using sneaker-safe, high-grade cleaning products.
-        </p>
+
+const SneakerCare = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto-slide
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, []);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  };
+
+  return (
+    <div className="sneaker-care-container">
+      <h1 className="sneaker-care-title">Sneaker Care</h1>
+      <p className="sneaker-care-subtitle">
+        Sneaker cleaning, restoration, and long-lasting protection.
+      </p>
+
+      <div className="carousel">
+        <button className="arrow left" onClick={prevSlide}>&#10094;</button>
+        <div className="slideshow-wrapper">
+          <img
+            src={images[currentIndex].src}
+            alt={images[currentIndex].title}
+            className="slideshow-image"
+          />
+          <div className="slideshow-text">
+            <h2>{images[currentIndex].title}</h2>
+            <p>{images[currentIndex].caption}</p>
+          </div>
+        </div>
+        <button className="arrow right" onClick={nextSlide}>&#10095;</button>
       </div>
 
-      <div className="sneaker-card">
-        <h2>Stain & Odor Removal</h2>
-        <p>
-          We neutralize odors and remove deep-set stains using eco-friendly, fabric-safe solutions that restore freshness.
-        </p>
-      </div>
-
-      <div className="sneaker-card">
-        <h2>Restoration & Protection</h2>
-        <p>
-          Services include sole repainting, scratch touch-ups, and long-lasting waterproof & anti-dirt protection sprays.
-        </p>
-      </div>
-
-      <div className="sneaker-card">
-        <h2>Sneaker Laundry Wash</h2>
-        <p>
-          Hand-washed and air-dried — no machines. Safe for delicate materials, maintaining your sneaker’s shape and longevity.
-        </p>
+      <div className="dots">
+        {images.map((_, index) => (
+          <span
+            key={index}
+            className={`dot ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(index)}
+          ></span>
+        ))}
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default SneakerCare;
