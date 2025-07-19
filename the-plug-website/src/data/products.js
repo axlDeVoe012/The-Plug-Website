@@ -45,7 +45,7 @@ const products = [
     price: "R900.00",
     description: "Premium English hookah pipe offering high durability and performance.",
     mainImage: "/sales/english1.webp",
-    images: ["/sales/english.webp"]
+    images: ["/sales/english.webp","/sales/english2.webp","/sales/english3.webp"]
   },
   {
     id: 7,
