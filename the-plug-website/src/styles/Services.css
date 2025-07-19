@@ -32,14 +32,17 @@
   justify-content: space-between;
   background: #0f2f25;
   border: 1px solid #14532d;
-  padding: 2rem;
+  padding: 3rem; /* increased padding */
   border-radius: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem; /* slightly bigger gap */
   box-shadow: 0 4px 16px rgba(0, 80, 40, 0.1);
   transition: box-shadow 0.3s ease;
   animation: fadeInSlide 0.8s ease-out both;
   --slide-count: 3;
-  gap: 1rem;
+  gap: 1.5rem; /* a bit more gap */
+  max-width: 900px; /* limit card max width */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .service-card:nth-child(odd) {
@@ -59,30 +62,42 @@
 
 /* Image Section */
 .service-carousel {
-  flex: 1 1 300px;
-  max-width: 480px;
+  flex: 1 1 360px; /* increased base size */
+  max-width: 550px; /* bigger max width */
   overflow: hidden;
   border-radius: 0.75rem;
   margin: auto;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background: #133925;
+  height: 280px; /* taller height */
 }
 
 .carousel {
   display: flex;
-  animation: slideImages calc(var(--slide-count) * 3s) infinite ease-in-out;
+  width: calc(var(--slide-count) * 100%);
+  animation: slideImages calc(var(--slide-count) * 4s) infinite ease-in-out;
 }
 
 .carousel img {
-  width: 100%;
-  height: auto;
+  width: calc(100% / var(--slide-count));
+  height: 280px; /* match container height */
   flex-shrink: 0;
-  object-fit: cover;
+  object-fit: cover; /* fill container nicely */
   border-radius: 0.75rem;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, filter 0.3s ease;
+  user-select: none;
+  filter: drop-shadow(0 4px 4px rgba(0,0,0,0.25));
+}
+
+.carousel img:hover {
+  filter: drop-shadow(0 8px 8px rgba(0, 255, 0, 0.6));
+  transform: scale(1.05);
 }
 
 /* Text Section */
 .service-text {
-  flex: 1 1 300px;
+  flex: 1 1 320px; /* slightly bigger */
   padding: 1rem;
 }
 
@@ -99,11 +114,11 @@
   color: #d1fae5;
 }
 
-/* Carousel Slide Animation */
+/* Carousel Slide Animation for 3 images */
 @keyframes slideImages {
-  0%, 25% { transform: translateX(0%); }
-  30%, 55% { transform: translateX(-100%); }
-  60%, 85% { transform: translateX(-200%); }
+  0%, 25%   { transform: translateX(0%); }
+  30%, 55%  { transform: translateX(-33.3333%); }
+  60%, 85%  { transform: translateX(-66.6666%); }
   90%, 100% { transform: translateX(0%); }
 }
 
@@ -156,6 +171,11 @@
 
   .service-carousel {
     max-width: 100%;
+    height: 220px;
+  }
+
+  .carousel img {
+    height: 220px;
   }
 
   .services-section h3 {
@@ -177,7 +197,7 @@
   }
 
   .service-card {
-    padding: 1.25rem;
+    padding: 1.75rem;
   }
 
   .service-text h5 {

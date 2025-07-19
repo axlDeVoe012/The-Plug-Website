@@ -1,28 +1,36 @@
-import React, { useState } from 'react';
-import products from '../data/products';
+import React, { useState, useEffect } from 'react';
+import productsData from '../data/products';
 import ProductModal from '../components/ProductModal';
 import '../styles/Products.css';
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const [searchQuery, setSearchQuery] = useState('');
 
-  // Toggle dark mode on the body tag
-  const toggleDarkMode = () => {
-    document.body.classList.toggle('dark-mode');
-  };
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') setSelectedProduct(null);
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
+  const filteredProducts = productsData.filter((p) =>
+    p.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <section className="py-5 bg-dark text-light min-vh-100">
       <div className="container">
-        {/* Dark Mode Toggle Button */}
-        <div className="text-end mb-4">
-          <button
-            className="btn btn-sm btn-outline-light"
-            onClick={toggleDarkMode}
-            aria-label="Toggle dark mode"
-          >
-            🌗 Toggle Dark Mode
-          </button>
+        {/* Search Input */}
+        <div className="mb-4">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="🔍 Search products..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
         </div>
 
         {/* Header */}
@@ -31,28 +39,35 @@ const Products = () => {
           <p className="text-secondary">Browse our premium cannabis, vapes, and accessories.</p>
         </div>
 
-        {/* Products Grid */}
+        {/* Product Grid */}
         <div className="row g-4">
-          {products.map((product) => (
-            <div className="col-sm-6 col-lg-4" key={product.id}>
-              <div className="position-relative">
-                {/* Card */}
-                <div className="card bg-success-subtle text-white h-100 border-0 shadow-sm overflow-hidden position-relative">
+          {filteredProducts.map((product) => (
+            <div className="col-12 col-sm-6 col-md-4 col-xl-3" key={product.id}>
+              <div className="position-relative product-card-container">
+                <div className="position-relative card product-card h-100 border-0 shadow-sm overflow-hidden">
+                  {/* Optional Tag */}
+                  {product.tag && (
+                    <span className="badge bg-warning text-dark position-absolute top-0 start-0 m-2 z-3">
+                      {product.tag}
+                    </span>
+                  )}
+
                   <div className="ratio ratio-4x3 position-relative overflow-hidden">
                     <img
                       src={product.mainImage}
-                      alt={product.name}
-                      className="object-fit-cover w-100 h-100"
+                      alt={`${product.name} preview`}
+                      className="product-image"
+                      loading="lazy"
                     />
                     {/* Hover Overlay */}
-                    <div className="hover-overlay d-flex flex-column justify-content-center align-items-center text-center p-3">
+                    <div className="hover-overlay">
                       <h5 className="fw-bold">{product.name}</h5>
                       <p className="small mb-0">
                         {product.description || 'Premium cannabis or vape product'}
                       </p>
                     </div>
 
-                    {/* Floating Price Tag with conditional red for "Coming Soon" */}
+                    {/* Floating Price */}
                     <div
                       className={`floating-price ${
                         product.price.toLowerCase() === 'coming soon' ? 'coming-soon' : ''
@@ -63,7 +78,7 @@ const Products = () => {
                   </div>
                 </div>
 
-                {/* View Details Button */}
+                {/* View Details */}
                 <button
                   className="btn btn-outline-success w-100 mt-3 d-flex align-items-center justify-content-center gap-2 animate-btn"
                   onClick={() => setSelectedProduct(product)}
@@ -75,12 +90,9 @@ const Products = () => {
           ))}
         </div>
 
-        {/* Modal */}
+        {/* Product Modal */}
         {selectedProduct && (
-          <ProductModal
-            product={selectedProduct}
-            onClose={() => setSelectedProduct(null)}
-          />
+          <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
         )}
       </div>
     </section>

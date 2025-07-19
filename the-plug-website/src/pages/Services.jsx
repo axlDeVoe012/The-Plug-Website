@@ -65,9 +65,8 @@ const Services = () => {
         {serviceData.map((service, index) => (
           <div
             key={index}
-            className={`service-card ${service.reverse ? 'reverse' : ''} ${
-              service.comingSoon ? 'coming-soon-card' : ''
-            }`}
+            className={`service-card ${service.reverse ? 'reverse' : ''} ${service.comingSoon ? 'coming-soon-card' : ''}`}
+            style={{ '--slide-count': service.images.length }}
           >
             <div className="service-carousel">
               <div className="carousel">

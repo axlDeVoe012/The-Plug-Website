@@ -1,8 +1,26 @@
-/* Hover overlay logic */
+/* ------------------------------
+   Product Image
+------------------------------ */
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* ------------------------------
+   Hover Overlay
+------------------------------ */
 .hover-overlay {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* subtle dark overlay */
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #e6f4ea;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -14,7 +32,6 @@
   padding: 1rem;
   z-index: 2;
   pointer-events: none;
-  user-select: none;
 }
 
 .card:hover .hover-overlay {
@@ -22,37 +39,32 @@
   pointer-events: auto;
 }
 
-/* Image zoom on hover */
-.card img {
-  transition: transform 0.3s ease;
-}
-
-.card:hover img {
-  transform: scale(1.05);
-}
-
-/* Floating price tag */
+/* ------------------------------
+   Floating Price Tag
+------------------------------ */
 .floating-price {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
-  color: #000000;
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 0.35rem 0.75rem;
-  border-top-left-radius: 0.5rem;
+  top: 10px;
+  right: 10px;
+  
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 0.85rem;
   z-index: 3;
   user-select: none;
 }
 
-/* Red style for "Coming Soon" price */
 .floating-price.coming-soon {
-  color: #ff4d4d; /* bright red text */
-  background-color: rgba(255, 0, 0, 0.15); /* subtle red bg */
+  background-color: #dc3545;
+  color: #fff;
   font-weight: 700;
 }
 
-/* Button animation */
+/* ------------------------------
+   Button Animation
+------------------------------ */
 .animate-btn {
   transition: transform 0.2s ease, background-color 0.3s ease;
 }
@@ -64,7 +76,19 @@
   border-color: #7af0bb;
 }
 
-/* Dark Mode Support */
+/* ------------------------------
+   Badge Styling
+------------------------------ */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.4em 0.7em;
+  border-radius: 0.5rem;
+  z-index: 3;
+}
+
+/* ------------------------------
+   Dark Mode Support
+------------------------------ */
 body.dark-mode {
   background-color: #0a1f14;
   color: #e6f4ea;
@@ -83,4 +107,10 @@ body.dark-mode .btn-outline-success {
 body.dark-mode .btn-outline-success:hover {
   background-color: #7af0bb;
   color: #142d1a;
+}
+
+body.dark-mode input.form-control {
+  background-color: #0e2b20;
+  color: #e6f4ea;
+  border: 1px solid #7af0bb;
 }

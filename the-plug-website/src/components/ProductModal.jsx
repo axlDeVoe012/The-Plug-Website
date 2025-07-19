@@ -1,77 +1,70 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import '../styles/ProductModal.css';
 
 const ProductModal = ({ product, onClose }) => {
+  const [selectedImage, setSelectedImage] = useState(product.mainImage);
+
   useEffect(() => {
-    const handleEsc = (event) => {
-      if (event.key === 'Escape') onClose();
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') onClose();
     };
     window.addEventListener('keydown', handleEsc);
     return () => window.removeEventListener('keydown', handleEsc);
   }, [onClose]);
 
   return (
-    <>
-      {/* Backdrop */}
+    <div className="modal-overlay" onClick={onClose}>
       <div
-        className="modal-backdrop fade show"
-        style={{ backgroundColor: 'rgba(0, 0, 0, 0.85)', zIndex: 1040 }}
-      ></div>
-
-      {/* Modal */}
-      <div
-        className="modal show fade d-block"
-        tabIndex="-1"
-        role="dialog"
-        style={{ zIndex: 1050 }}
-        onClick={onClose}
-        aria-labelledby="productModalLabel"
-        aria-modal="true"
+        className="product-modal card text-light bg-dark"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div
-          className="modal-dialog modal-lg modal-dialog-centered"
-          role="document"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className="modal-content bg-dark text-white border-success border-2 shadow rounded-4">
-            <div className="modal-header border-0">
-              <h5 className="modal-title text-success" id="productModalLabel">
-                {product.name}
-              </h5>
-              <button
-                type="button"
-                className="btn-close btn-close-white"
-                aria-label="Close"
-                onClick={onClose}
+        {/* Close Button */}
+        <button className="btn-close btn-close-white ms-auto p-3" onClick={onClose}></button>
+
+        <div className="row g-4 p-4">
+          {/* Image Gallery */}
+          <div className="col-md-6">
+            <div className="main-image rounded overflow-hidden mb-3">
+              <img
+                src={selectedImage}
+                alt={`${product.name} selected`}
+                className="img-fluid object-fit-cover"
               />
             </div>
-            <div
-              className="modal-body"
-              style={{ maxHeight: '70vh', overflowY: 'auto' }}
-            >
-              <div className="row g-3">
+
+            {product.images?.length > 1 && (
+              <div className="d-flex gap-2 flex-wrap justify-content-center">
                 {product.images.map((img, idx) => (
-                  <div key={idx} className="col-6">
-                    <img
-                      src={img}
-                      alt={`${product.name} image ${idx + 1}`}
-                      className="img-fluid rounded border border-success shadow"
-                      style={{
-                        maxHeight: '250px',
-                        objectFit: 'cover',
-                        width: '100%',
-                      }}
-                    />
-                  </div>
+                  <img
+                    key={idx}
+                    src={img}
+                    alt={`${product.name} ${idx + 1}`}
+                    className={`thumbnail ${selectedImage === img ? 'active' : ''}`}
+                    onClick={() => setSelectedImage(img)}
+                  />
                 ))}
               </div>
-              <p className="mt-3 text-success fw-bold fs-5">
-                Price: {product.price}
-              </p>
+            )}
+          </div>
+
+          {/* Product Details */}
+          <div className="col-md-6">
+            <h3 className="text-success fw-bold mb-3">{product.name}</h3>
+            {product.tag && (
+              <span className="badge bg-warning text-dark mb-2">{product.tag}</span>
+            )}
+            <p className="text-secondary">
+              {product.description || 'No description available.'}
+            </p>
+            <div className="mt-4">
+              <span className={`price-tag ${product.price.toLowerCase() === 'coming soon' ? 'coming-soon' : ''}`}>
+                {product.price}
+              </span>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

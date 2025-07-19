@@ -6,31 +6,33 @@ const Pricing = () => {
     <section className="pricing-section">
       <div className="container py-5 text-light text-center">
         <h2 className="fw-bold mb-4">Our Pricing</h2>
-        <p className="lead mb-5 text-success">Affordable quality for your lifestyle, powered by the community 🌿</p>
+        <p className="lead mb-5 text-success">
+          Fair prices. Great vibes. Powered by the community 🌿
+        </p>
 
         <div className="row justify-content-center gap-4">
 
-          {/* Cannabis Products Card */}
+          {/* 🌿 Cannabis Products */}
           <div className="col-md-4 pricing-card blue-card">
             <div className="pricing-header">
               <h4 className="mb-2">🌿 Cannabis Products</h4>
-              <p className="subtitle">Premium quality, grown with love</p>
+              <p className="subtitle">Premium quality — grown with love</p>
             </div>
             <hr className="divider" />
             <ul className="list-unstyled text-start">
-              <li><strong>Pre-Rolls:</strong> R60</li>
-              <li><strong>Edibles:</strong> R100 – R250</li>
-              <li><strong>Buds (per gram):</strong> R90 – R120</li>
-              <li><strong>CBD Oils:</strong> R150 – R300</li>
-              <li><strong>Accessories:</strong> From R40</li>
+              <li><strong>Pre-Rolls:</strong> R40 – R60</li>
+              <li><strong>Edibles:</strong> R40 – R50</li>
+              <li><strong>Buds (per gram):</strong> R60 – R100</li>
+              <li><strong>Grinders & Rollers:</strong> From R30</li>
+              <li><strong>Accessories:</strong> R10 – R60</li>
             </ul>
           </div>
 
-          {/* Services Card */}
+          {/* 🛠️ Lifestyle Services */}
           <div className="col-md-4 pricing-card black-card">
             <div className="pricing-header">
-              <h4 className="mb-2">🛠️ Services</h4>
-              <p className="subtitle">Grooming & shine for your lifestyle</p>
+              <h4 className="mb-2">🛠️ Lifestyle Services</h4>
+              <p className="subtitle">For your car, kicks & cannabis lifestyle</p>
             </div>
             <hr className="divider" />
             <ul className="list-unstyled text-start">
@@ -45,26 +47,26 @@ const Pricing = () => {
             </ul>
           </div>
 
-          {/* Vapes & Hubbly Card */}
+          {/* 💨 Vapes & Hubbly */}
           <div className="col-md-4 pricing-card green-card">
             <div className="pricing-header">
               <h4 className="mb-2">💨 Vapes & Hubbly</h4>
-              <p className="subtitle">Smooth smoke. Flavour rich. Shared joy.</p>
+              <p className="subtitle">Smooth. Flavourful. Shared joy.</p>
             </div>
             <hr className="divider" />
             <ul className="list-unstyled text-start">
-              <li><strong>Hubbly Rentals:</strong> R50/hr</li>
-              <li><strong>Vape Pens:</strong> R200 – R500</li>
-              <li><strong>Cartridges:</strong> R100 – R250</li>
+              <li><strong>Hubbly Rentals:</strong> R100/hr</li>
+              <li><strong>Vapes:</strong> R60 – R350</li>
+              <li><strong>Coils & Riffils:</strong> R10 – R150</li>
 
-              <li className="subheading">✨ Flavours</li>
-              <li>Grape Mint • Double Apple • Bubblegum • Cola</li>
+              <li className="subheading mt-3">✨ Flavours</li>
+              <li>Amaren • Nareen • Nakhla  • Richman • Golden Barzz</li>
 
-              <li className="subheading">🔥 Charcoal</li>
-              <li>Quick Light: R20 | Coconut Shell: R40</li>
+              <li className="subheading mt-3">🔥 Charcoal</li>
+              <li>Quick Light: R2 – R10<br/></li>
 
-              <li className="subheading">🧪 Add-ons</li>
-              <li>Ice Hose: R30 | Extra Bowl: R25</li>
+              <li className="subheading mt-3">🧪 Add-ons</li>
+              <li>Ice Hose: R30 • Extra Bowl: R25</li>
             </ul>
           </div>
 
