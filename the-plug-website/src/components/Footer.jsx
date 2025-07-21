@@ -8,6 +8,7 @@ const Footer = () => (
         rel="noopener noreferrer"
       >
         <i className="fab fa-instagram fa-lg"></i>
+        <span className="visually-hidden">Instagram</span>
       </a>
       <a
         href="https://wa.me/27720615124" // ← Replace with your WhatsApp number like 27721234567
@@ -16,6 +17,7 @@ const Footer = () => (
         rel="noopener noreferrer"
       >
         <i className="fab fa-whatsapp fa-lg"></i>
+         <span className="visually-hidden">WhatsApp</span>
       </a>
     </div>
     <p className="mb-0">&copy; {new Date().getFullYear()} The Plug. All rights reserved.</p>

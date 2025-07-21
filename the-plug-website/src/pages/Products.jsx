@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import productsData from '../data/products';
 import ProductModal from '../components/ProductModal';
 import '../styles/Products.css';
+import '../index.css';
+
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null);

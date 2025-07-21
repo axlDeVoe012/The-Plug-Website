@@ -9,23 +9,23 @@ const products = [
   },
   {
     id: 2,
-    name: "Egyptian Small hookah Pipe",
+    name: "Egyptian Small Hookah Pipe",
     price: "R300.00",
     description: "Compact Egyptian hookah pipe for personal sessions.",
     mainImage: "/sales/small.jpg",
-    images: ["/sales/small.jpg","/sales/small2.webp"]
+    images: ["/sales/small.jpg", "/sales/small2.webp"]
   },
   {
     id: 3,
-    name: "Egyptian Medium hookah Pipe",
+    name: "Egyptian Medium Hookah Pipe",
     price: "R350.00",
     description: "Medium-sized Egyptian hookah pipe built for smooth draws.",
     mainImage: "/sales/medium.png",
-    images: ["/sales/medium1.png", "/sales/medium2.png","/sales/midium3.png"]
+    images: ["/sales/medium1.png", "/sales/medium2.png", "/sales/midium3.png"]
   },
   {
     id: 4,
-    name: "Egyptian Big hookah Pipe",
+    name: "Egyptian Big Hookah Pipe",
     price: "R450.00",
     description: "Large Egyptian hookah pipe ideal for group sessions.",
     mainImage: "/sales/Big.png",
@@ -41,11 +41,11 @@ const products = [
   },
   {
     id: 6,
-    name: "English Walker hookah Pipe",
+    name: "English Walker Hookah Pipe",
     price: "R900.00",
     description: "Premium English hookah pipe offering high durability and performance.",
-    mainImage: "/sales/english1.webp",
-    images: ["/sales/english.webp","/sales/english2.webp","/sales/english3.webp"]
+    mainImage: "/sales/hubbly/main.jpg",
+    images: ["/sales/english.webp", "/sales/english2.webp", "/sales/english3.webp", "/sales/english1.webp"]
   },
   {
     id: 7,
@@ -85,13 +85,13 @@ const products = [
     price: "R350.00",
     description: "Long-lasting Velocity 25K disposable vape with premium feel.",
     mainImage: "/sales/velocity2.jpg",
-    images: ["/sales/velocity.jpeg", "sales/volocity.jpeg", "sales/velocity.webp"]
+    images: ["/sales/velocity.jpeg", "/sales/volocity.jpeg", "/sales/velocity.webp"]
   },
   {
     id: 12,
-    name: "Grystal Vape 600K",
+    name: "Crystal Vape 600K",
     price: "R60.00",
-    description: "Budget-friendly Grystal 600K vape for quick sessions.",
+    description: "Budget-friendly Crystal 600K vape for quick sessions.",
     mainImage: "/sales/grystal.jpeg",
     images: ["/sales/crystal.jpeg", "/sales/crystal2.jpeg"]
   },
@@ -101,7 +101,7 @@ const products = [
     price: "R140.00",
     description: "Beast 7K vape delivers powerful flavour in a compact body.",
     mainImage: "/sales/vapepen/FlavourBeast.webp",
-    images: ["/sales/vapepen/flvbeast.jpeg", "sales/beast.webp"]
+    images: ["/sales/vapepen/flvbeast.jpeg", "/sales/beast.webp"]
   },
   {
     id: 14,
@@ -121,22 +121,46 @@ const products = [
   },
   {
     id: 16,
-    name: "Vuse riffils",
+    name: "Vuse Refills",
     price: "R150.00",
-    description: "Vuse riffils delivers powerful flavour in a compact body.",
+    description: "Vuse refills deliver powerful flavour in a compact body.",
     mainImage: "/sales/vusem.png",
-    images: ["/sales/vuse.png", "/sales/vuse1.jpg", "/sales/v].jpg", "/sales/v.jpeg", "/sales/vuse4.jpeg"]
+    images: ["/sales/vuse.png", "/sales/vuse1.jpg", "/sales/vuse4.jpeg", "/sales/v.jpeg"]
   },
   {
     id: 17,
     name: "Nesh Coil 1.5K",
     price: "R100.00",
-    description: "Nesh Coil 1.5K",
+    description: "High-performance Nesh Coil 1.5K for reliable vaping.",
     mainImage: "/sales/coil_side.png",
     images: ["/sales/cm.png", "/sales/c.jpeg"]
   },
   {
     id: 18,
+    name: "Candy Vapour 100ml Vape Juice",
+    price: "R100.00",
+    description: "Flavour-packed 100ml vape juice from Candy Vapour.",
+    mainImage: "/sales/100m4.webp",
+    images: ["/sales/100m1.webp", "/sales/100m2.webp", "/sales/100m3.webp", "/sales/100m.webp", "/sales/100m5.jpg"]
+  },
+  {
+    id: 19,
+    name: "Candy Vapour 60ml Vape Juice",
+    price: "R60.00",
+    description: "Candy Vapour 60ml vape juice with sweet flavour tones.",
+    mainImage: "/sales/60m1.jpg",
+    images: ["/sales/60m.jpg", "/sales/60m2.jpg"]
+  },
+  {
+    id: 20,
+    name: "Ultra Cool 60ml Vape Juice",
+    price: "R60.00",
+    description: "Refreshing and cool vape juice for daily use.",
+    mainImage: "/sales/ultra.webp",
+    images: ["/sales/ultra3.webp", "/sales/ultra1.webp"]
+  },
+  {
+    id: 21,
     name: "Pre-Rolled Joint – Indoor",
     price: "R60.00",
     description: "Premium indoor cannabis pre-roll for a clean high.",
@@ -144,7 +168,7 @@ const products = [
     images: ["/sales/prerolled/indoor.jpg", "/sales/prerolled/indoor_side.jpg"]
   },
   {
-    id: 19,
+    id: 22,
     name: "Pre-Rolled Joint – Greenhouse",
     price: "R40.00",
     description: "Greenhouse-grown pre-rolled joint for a mellow vibe.",
@@ -152,7 +176,7 @@ const products = [
     images: ["/sales/prerolled/greenhouse.jpg", "/sales/prerolled/bud.jpg"]
   },
   {
-    id: 20,
+    id: 23,
     name: "Red Straps Edibles",
     price: "R50.00",
     description: "Sweet and chewy cannabis-infused red straps.",
@@ -160,7 +184,7 @@ const products = [
     images: ["/sales/edibles/redstraps1.webp"]
   },
   {
-    id: 21,
+    id: 24,
     name: "Cannabis Jelly Edibles",
     price: "R40.00",
     description: "Flavorful cannabis jelly treats for a mellow high.",
@@ -168,7 +192,7 @@ const products = [
     images: ["/sales/edibles/jelly.webp"]
   },
   {
-    id: 22,
+    id: 25,
     name: "Lighter",
     price: "R10.00",
     description: "Reliable lighter for all your smoking needs.",
@@ -176,7 +200,7 @@ const products = [
     images: ["/sales/lighter/lighter.webp"]
   },
   {
-    id: 23,
+    id: 26,
     name: "Cigarette Roller",
     price: "R60.00",
     description: "Durable cigarette roller for consistent, smooth rolls.",
@@ -184,15 +208,15 @@ const products = [
     images: ["/sales/roller1.jpg", "/sales/roller2.webp"]
   },
   {
-    id: 24,
-    name: "Dot Riffils",
+    id: 27,
+    name: "Dot Refills",
     price: "R10.00",
-    description: "Handy dot riffils for quick, on-the-go use.",
+    description: "Handy dot refills for quick, on-the-go use.",
     mainImage: "/sales/dot.jpg",
     images: ["/sales/dot2.jpg", "/sales/dot3.jpg"]
   },
   {
-    id: 25,
+    id: 28,
     name: "Pre-Rolled Joint Holder",
     price: "R15.00",
     description: "Branded pre-rolled holder to keep your joints fresh and safe.",
@@ -200,15 +224,15 @@ const products = [
     images: ["/sales/holder.jpg"]
   },
   {
-    id: 26,
-    name: "Hooker Head",
+    id: 29,
+    name: "Hookah Head",
     price: "R60.00",
-    description: "Replacement hooker heads compatible with most pipes.",
+    description: "Replacement hookah heads compatible with most pipes.",
     mainImage: "/sales/head1.jpg",
     images: ["/sales/head.jpg"]
   },
   {
-    id: 27,
+    id: 30,
     name: "Hookah Tray",
     price: "From R30.00",
     description: "Stylish and functional trays for hookah and accessories.",
@@ -216,15 +240,15 @@ const products = [
     images: ["/sales/tray2.jpeg", "/sales/tray1.jpeg"]
   },
   {
-    id: 28,
-    name: "Charcoal Block",
+    id: 31,
+    name: "Charcoal Block (Square)",
     price: "R2.00",
     description: "Blue Mix (Square) charcoal block ideal for hookahs.",
     mainImage: "/sales/squalcoal1.jpeg",
     images: ["/sales/squalcoal.jpeg"]
   },
   {
-    id: 29,
+    id: 32,
     name: "Charcoal (Blue)",
     price: "R10.00",
     description: "High-quality blue charcoal for smoking sessions.",
@@ -232,7 +256,7 @@ const products = [
     images: ["/sales/coal.jpeg"]
   },
   {
-    id: 30,
+    id: 33,
     name: "Rollers",
     price: "From R30.00",
     description: "Efficient roller for fast, consistent joints every time.",
@@ -240,7 +264,7 @@ const products = [
     images: ["/sales/roller1.jpg", "/sales/roller2.webp"]
   },
   {
-    id: 31,
+    id: 34,
     name: "Grinder",
     price: "From R30.00",
     description: "Sharp, portable cannabis grinder for your sessions.",
@@ -248,7 +272,7 @@ const products = [
     images: ["/sales/grinders.webp", "/sales/grinder2.webp", "/sales/grinder3.webp"]
   },
   {
-    id: 32,
+    id: 35,
     name: "Pitbull Cannabis (Per Gram)",
     price: "R80.00",
     description: "Premium Pitbull cannabis strain known for its potency and smoothness.",
@@ -256,7 +280,7 @@ const products = [
     images: ["/sales/cannabis/pit.jpg"]
   },
   {
-    id: 33,
+    id: 36,
     name: "Heli Jelly Cannabis (Per Gram)",
     price: "R60.00",
     description: "Heli Jelly strain offering a relaxing and euphoric experience.",
@@ -264,7 +288,7 @@ const products = [
     images: ["/sales/cannabis/indoor_side.jpg"]
   },
   {
-    id: 34,
+    id: 37,
     name: "Dutch Magic Cannabis (Per Gram)",
     price: "R60.00",
     description: "Dutch Magic is a classic strain with a balanced hybrid effect.",
@@ -272,7 +296,7 @@ const products = [
     images: ["/sales/cannabis/weed.jpg"]
   },
   {
-    id: 35,
+    id: 38,
     name: "Money Grapes Cannabis (Per Gram)",
     price: "R60.00",
     description: "Money Grapes has a sweet grape aroma and uplifting high.",
@@ -280,7 +304,7 @@ const products = [
     images: ["/sales/cannabis/moneygrapes_side.jpg", "/sales/cannabis/buds.jpg"]
   },
   {
-    id: 36,
+    id: 39,
     name: "Pop Tarts Cannabis (Per Gram)",
     price: "R60.00",
     description: "Pop Tarts strain with dessert-like flavor and mellow effects.",
@@ -288,7 +312,7 @@ const products = [
     images: ["/sales/cannabis/weed1.jpg"]
   },
   {
-    id: 37,
+    id: 40,
     name: "Purple Grape Cannabis (Per Gram)",
     price: "R60.00",
     description: "Fruity and fragrant Purple Grape strain great for relaxation.",
@@ -296,36 +320,12 @@ const products = [
     images: ["/sales/cannabis/closeup.jpg"]
   },
   {
-    id: 38,
+    id: 41,
     name: "Loud Cake Cannabis (Per Gram)",
     price: "R60.00",
     description: "Potent Loud Cake strain, perfect for experienced users.",
     mainImage: "/sales/cannabis/buds-dark.jpg",
     images: ["/sales/cannabis/loud.jpg"]
-  },
-  {
-    id: 39,
-    name: "Dead Jack Cannabis (Per Gram)",
-    price: "R100.00",
-    description: "Heavy-hitting Dead Jack strain for deep body relaxation.",
-    mainImage: "/sales/cannabis/deadjack.jpg",
-    images: ["/sales/cannabis/deadjack2.jpg", "/sales/cannabis/jack.jpg"]
-  },
-  {
-    id: 40,
-    name: "Rancouche Cannabis (Per Gram)",
-    price: "R60.00",
-    description: "Smooth and euphoric Rancouche strain grown with care.",
-    mainImage: "/sales/cannabis/rancouche.jpg",
-    images: ["/sales/cannabis/rancouche1.jpg"]
-  },
-  {
-    id: 41,
-    name: "Lava Cake Cannabis (Per Gram)",
-    price: "R80.00",
-    description: "Sweet and relaxing Lava Cake strain for unwinding.",
-    mainImage: "/sales/cannabis/lavacake.jpg",
-    images: ["/sales/cannabis/lavacake1.jpg"]
   }
 ];
 

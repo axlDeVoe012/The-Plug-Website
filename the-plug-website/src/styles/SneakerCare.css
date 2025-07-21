@@ -1,7 +1,9 @@
+
 .sneaker-care-container {
   background: linear-gradient(to bottom, #d0f0ff, #f0ffff);
   padding: 4rem 1rem;
   text-align: center;
+  text-align: -webkit-center;
   font-family: 'Segoe UI', sans-serif;
   overflow: hidden;
   min-height: 100vh;
@@ -39,6 +41,7 @@
   box-shadow: 0 16px 40px rgba(0, 119, 182, 0.4);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari 9+ */
 }
 
 .slideshow-wrapper {
@@ -50,6 +53,7 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari 9+ */
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(0, 119, 182, 0.4);
@@ -63,6 +67,7 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari 9+ */
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(0, 119, 182, 0.4);
@@ -76,6 +81,7 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari 9+ */
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(0, 119, 182, 0.4);
@@ -89,6 +95,7 @@
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari 9+ */
   border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 16px 40px rgba(0, 119, 182, 0.4);
