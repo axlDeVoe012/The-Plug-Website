@@ -74,10 +74,6 @@ const strainsData = [
   },
 ];
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 8d96cbcf299ac164128a692b2f8ee63dd5ca60a0
 const Education = () => {
   const [openStrain, setOpenStrain] = useState(null);
 
@@ -86,55 +82,12 @@ const Education = () => {
   };
 
   return (
-<<<<<<< HEAD
-    <div className="education-container">
-      <h1 className="education-title">Cannabis Education</h1>
-      <p className="education-subtitle">
-        Learn about cannabis, its uses, effects, and how to consume responsibly. Whether you're new or experienced, this page helps you make informed, mindful choices.
-      </p>
-
-      {/* Educational Cards */}
-      <div className="education-card">
-        <h2>What is Cannabis?</h2>
-        <p>
-          Cannabis is a plant that contains compounds called cannabinoids—mainly THC and CBD. It's used for relaxation, pain relief, anxiety, and other therapeutic or recreational benefits.
-        </p>
-      </div>
-
-      <div className="education-card">
-        <h2>THC vs. CBD</h2>
-        <p>
-          <strong>THC</strong> is psychoactive and produces a "high" effect. <strong>CBD</strong> is non-psychoactive and promotes calmness and relief from inflammation, anxiety, and pain.
-        </p>
-      </div>
-
-      <div className="education-card">
-        <h2>Ways to Use Cannabis</h2>
-        <p>
-          You can smoke, vape, eat, or apply cannabis. Edibles take longer to kick in, while vaping and smoking work quickly. Each method affects the body differently.
-        </p>
-      </div>
-
-      <div className="education-card">
-        <h2>Responsible Use</h2>
-        <p>
-          Start low and go slow, especially with edibles or new strains. Never drive high and always follow local laws. Know your tolerance and choose safe environments.
-        </p>
-      </div>
-
-      <div className="education-card">
-        <h2>Is Cannabis Legal?</h2>
-        <p>
-          In South Africa, adults may use cannabis privately. However, commercial sale is restricted unless licensed. Always stay up to date with changing laws.
-        </p>
-      </div>
-=======
     <main className="education-container" role="main">
       <header>
         <h1 className="education-title">Cannabis Education</h1>
         <p className="education-subtitle">
           Learn about cannabis, its uses, effects, and how to consume responsibly.
-          Whether you’re new or experienced, this page helps you make informed choices.
+          Whether you're new or experienced, this page helps you make informed, mindful choices.
         </p>
       </header>
 
@@ -143,7 +96,7 @@ const Education = () => {
           <h2>What is Cannabis?</h2>
           <p>
             Cannabis is a plant that contains compounds called cannabinoids—mainly THC and CBD.
-            It's used for relaxation, pain relief1, anxiety, and other therapeutic or recreational benefits.
+            It's used for relaxation, pain relief, anxiety, and other therapeutic or recreational benefits.
           </p>
         </article>
 
@@ -158,8 +111,8 @@ const Education = () => {
         <article className="education-card">
           <h2>Ways to Use Cannabis</h2>
           <p>
-            Cannabis can be smoked, vaped, eaten (as edibles), applied as topicals, or taken sublingually.
-            Each method has a different onset time and effect duration.
+            You can smoke, vape, eat, or apply cannabis. Edibles take longer to kick in, while vaping and smoking work quickly.
+            Each method affects the body differently.
           </p>
         </article>
 
@@ -170,13 +123,12 @@ const Education = () => {
             Always follow local laws and avoid driving or operating machinery while under the influence.
           </p>
         </article>
->>>>>>> 8d96cbcf299ac164128a692b2f8ee63dd5ca60a0
 
         <article className="education-card">
           <h2>Is Cannabis Legal?</h2>
           <p>
-            In South Africa, adults may use cannabis privately.
-            However, commercial sale is restricted unless licensed. Always stay up to date with changing laws.
+            In South Africa, adults may use cannabis privately. However, commercial sale is restricted unless licensed.
+            Always stay up to date with changing laws.
           </p>
         </article>
 
