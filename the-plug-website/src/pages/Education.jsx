@@ -96,7 +96,7 @@ const Education = () => {
           <h2>What is Cannabis?</h2>
           <p>
             Cannabis is a plant that contains compounds called cannabinoids—mainly THC and CBD.
-            It's used for relaxation, pain relief, anxiety, and other therapeutic or recreational benefits.
+            It's used for relaxation, pain relief1, anxiety, and other therapeutic or recreational benefits.
           </p>
         </article>
 
