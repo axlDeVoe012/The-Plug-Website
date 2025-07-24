@@ -74,7 +74,10 @@ const strainsData = [
   },
 ];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8d96cbcf299ac164128a692b2f8ee63dd5ca60a0
 const Education = () => {
   const [openStrain, setOpenStrain] = useState(null);
 
@@ -83,6 +86,7 @@ const Education = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="education-container">
       <h1 className="education-title">Cannabis Education</h1>
       <p className="education-subtitle">
@@ -124,68 +128,127 @@ const Education = () => {
           In South Africa, adults may use cannabis privately. However, commercial sale is restricted unless licensed. Always stay up to date with changing laws.
         </p>
       </div>
-
-      <div className="education-card">
-        <h2>Benefits of Cannabis</h2>
-        <p>
-          Cannabis may relieve pain, anxiety, stress, nausea, and insomnia. It's also being studied for epilepsy, PTSD, and chronic illness management.
+=======
+    <main className="education-container" role="main">
+      <header>
+        <h1 className="education-title">Cannabis Education</h1>
+        <p className="education-subtitle">
+          Learn about cannabis, its uses, effects, and how to consume responsibly.
+          Whether you’re new or experienced, this page helps you make informed choices.
         </p>
-      </div>
+      </header>
 
-      <div className="education-card">
-        <h2>Risks and Side Effects</h2>
-        <p>
-          Cannabis can cause dry mouth, dizziness, impaired memory, anxiety, or paranoia—especially in high doses. Long-term overuse can affect motivation or focus.
-        </p>
-      </div>
+      <section aria-label="Educational Content">
+        <article className="education-card">
+          <h2>What is Cannabis?</h2>
+          <p>
+            Cannabis is a plant that contains compounds called cannabinoids—mainly THC and CBD.
+            It's used for relaxation, pain relief, anxiety, and other therapeutic or recreational benefits.
+          </p>
+        </article>
 
-      <div className="education-card">
-        <h2>Different Cannabis Strains</h2>
-        <p>
-          <strong>Indica</strong> strains are relaxing and sedative—great for nighttime. <strong>Sativa</strong> strains are energizing and social. <strong>Hybrids</strong> combine traits of both.
-        </p>
-      </div>
+        <article className="education-card">
+          <h2>THC vs. CBD</h2>
+          <p>
+            <strong>THC</strong> is psychoactive and produces a "high" effect.
+            <strong> CBD</strong> is non-psychoactive and promotes calmness and relief from inflammation, anxiety, and pain.
+          </p>
+        </article>
 
-      <div className="education-card">
-        <h2>Terpenes and Their Effects</h2>
-        <p>
-          Terpenes give cannabis its flavor and scent. <strong>Limonene</strong> is citrusy and mood-boosting. <strong>Myrcene</strong> is calming. <strong>Pinene</strong> helps with alertness.
-        </p>
-      </div>
+        <article className="education-card">
+          <h2>Ways to Use Cannabis</h2>
+          <p>
+            Cannabis can be smoked, vaped, eaten (as edibles), applied as topicals, or taken sublingually.
+            Each method has a different onset time and effect duration.
+          </p>
+        </article>
 
-      <div className="education-card">
-        <h2>Medical Use of Cannabis</h2>
-        <p>
-          Doctors may prescribe cannabis for pain, seizures, sleep disorders, and more. CBD-rich products are common for medical relief without the high.
-        </p>
-      </div>
+        <article className="education-card">
+          <h2>Responsible Use</h2>
+          <p>
+            Start low, go slow. Especially with edibles and new strains, it's important to begin with a small dose and wait before consuming more.
+            Always follow local laws and avoid driving or operating machinery while under the influence.
+          </p>
+        </article>
+>>>>>>> 8d96cbcf299ac164128a692b2f8ee63dd5ca60a0
 
-      <div className="education-card">
-        <h2>The Endocannabinoid System</h2>
-        <p>
-          This system in your body helps regulate sleep, appetite, mood, and memory. Cannabinoids like THC and CBD interact with it to create various effects.
-        </p>
-      </div>
+        <article className="education-card">
+          <h2>Is Cannabis Legal?</h2>
+          <p>
+            In South Africa, adults may use cannabis privately.
+            However, commercial sale is restricted unless licensed. Always stay up to date with changing laws.
+          </p>
+        </article>
 
-      {/* Our Strains Section */}
-      <div className="education-card strains-card">
-        <h2>🌱 Our Strains</h2>
-        {strainsData.map((strain, index) => (
-          <div key={index} className="strain-section">
-            <button
-              className={`strain-toggle ${openStrain === index ? 'active' : ''}`}
-              onClick={() => toggleStrain(index)}
-            >
-              {strain.name}
-              <span className="arrow">{openStrain === index ? '✦' : '➤'}</span>
-            </button>
-            <div className={`strain-description ${openStrain === index ? 'open' : ''}`}>
-              {strain.description}
+        <article className="education-card">
+          <h2>Benefits of Cannabis</h2>
+          <p>
+            Cannabis may relieve pain, anxiety, stress, nausea, and insomnia. It's also being studied for epilepsy, PTSD, and chronic illness management.
+          </p>
+        </article>
+
+        <article className="education-card">
+          <h2>Risks and Side Effects</h2>
+          <p>
+            Cannabis can cause dry mouth, dizziness, impaired memory, anxiety, or paranoia—especially in high doses.
+            Long-term overuse can affect motivation or focus.
+          </p>
+        </article>
+
+        <article className="education-card">
+          <h2>Different Cannabis Strains</h2>
+          <p>
+            <strong>Indica</strong> strains are relaxing and sedative—great for nighttime.
+            <strong> Sativa</strong> strains are energizing and social.
+            <strong> Hybrids</strong> combine traits of both.
+          </p>
+        </article>
+
+        <article className="education-card">
+          <h2>Terpenes and Their Effects</h2>
+          <p>
+            Terpenes give cannabis its flavor and scent.
+            <strong> Limonene</strong> is citrusy and mood-boosting.
+            <strong> Myrcene</strong> is calming.
+            <strong> Pinene</strong> helps with alertness.
+          </p>
+        </article>
+
+        <article className="education-card">
+          <h2>Medical Use of Cannabis</h2>
+          <p>
+            Doctors may prescribe cannabis for pain, seizures, sleep disorders, and more.
+            CBD-rich products are common for medical relief without the high.
+          </p>
+        </article>
+
+        <article className="education-card">
+          <h2>The Endocannabinoid System</h2>
+          <p>
+            This system in your body helps regulate sleep, appetite, mood, and memory.
+            Cannabinoids like THC and CBD interact with it to create various effects.
+          </p>
+        </article>
+
+        <article className="education-card strains-card">
+          <h2>🌱 Our Strains</h2>
+          {strainsData.map((strain, index) => (
+            <div key={index} className="strain-section">
+              <button
+                className={`strain-toggle ${openStrain === index ? 'active' : ''}`}
+                onClick={() => toggleStrain(index)}
+              >
+                {strain.name}
+                <span className="arrow">{openStrain === index ? '✦' : '➤'}</span>
+              </button>
+              <div className={`strain-description ${openStrain === index ? 'open' : ''}`}>
+                {strain.description}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </div>
+          ))}
+        </article>
+      </section>
+    </main>
   );
 };
 
