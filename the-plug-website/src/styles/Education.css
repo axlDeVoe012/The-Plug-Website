@@ -1,70 +1,58 @@
-/* Education.css */
-
-.education-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #064e3b, #000);
-  color: #e6ffe6;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
+.strain-section {
+  margin-top: 1rem;
+  border-top: 1px dashed rgba(134, 239, 172, 0.3);
+  padding-top: 1rem;
 }
 
-/* Optional: Soft background cannabis image */
-.education-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('/images/cannabis-bg.jpg') no-repeat center center / cover;
-  opacity: 0.07;
-  z-index: -1;
-}
-
-.education-title {
-  font-size: 2.75rem;
-  font-weight: 800;
-  text-align: center;
+.strain-toggle {
+  width: 100%;
+  background: none;
   color: #bbf7d0;
-  margin-bottom: 1rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
 }
 
-.education-subtitle {
-  font-size: 1.1rem;
-  text-align: center;
-  color: #cbd5e1;
-  margin-bottom: 2.5rem;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.education-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.25rem;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  backdrop-filter: blur(8px);
-}
-
-.education-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
-
-.education-card h2 {
-  font-size: 1.75rem;
+.strain-toggle:hover {
   color: #86efac;
-  margin-bottom: 0.5rem;
+  border-left: 4px solid #22c55e;
+  background-color: rgba(34, 197, 94, 0.1);
+  border-radius: 0.5rem;
+  padding-left: 0.5rem;
 }
 
-.education-card p {
-  color: #d1fae5;
-  line-height: 1.6;
+.arrow {
   font-size: 1rem;
+  color: #86efac;
+  transition: transform 0.3s;
+}
+
+.strain-description {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.4s ease;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d1fae5;
+}
+
+.strain-description.open {
+  max-height: 300px;
+  opacity: 1;
+  margin-top: 0.5rem;
+}
+
+.strains-card {
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.15);
 }
