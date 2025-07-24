@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Pricing.css';
+import '../index.css';
 
 const Pricing = () => {
   return (
@@ -23,6 +24,8 @@ const Pricing = () => {
               <li><strong>Pre-Rolls:</strong> R40 – R60</li>
               <li><strong>Edibles:</strong> R40 – R50</li>
               <li><strong>Buds (per gram):</strong> R60 – R100</li>
+              <li><strong>Delivery:</strong> Free on orders over 5g and R250.00.<br/>
+                  &nbsp;&nbsp;&nbsp;&nbsp;A delivery fee applies if you’re more than 20km away.</li>
               <li><strong>Grinders & Rollers:</strong> From R30</li>
               <li><strong>Accessories:</strong> R10 – R60</li>
             </ul>

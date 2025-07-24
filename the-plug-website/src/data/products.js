@@ -37,7 +37,7 @@ const products = [
     price: "R250.00",
     description: "Affordable medium-size hookah pipe with a traditional build.",
     mainImage: "/sales/other.webp",
-    images: ["/sales/other2.webp"]
+    images: ["/sales/other2.webp","/sales/other.webp"]
   },
   {
     id: 6,
@@ -181,7 +181,7 @@ const products = [
     price: "R50.00",
     description: "Sweet and chewy cannabis-infused red straps.",
     mainImage: "/sales/edibles/redstraps.WebP",
-    images: ["/sales/edibles/redstraps1.webp"]
+    images: ["/sales/edibles/redstraps1.webp","/sales/edibles/redstraps.WebP"]
   },
   {
     id: 24,
@@ -189,7 +189,7 @@ const products = [
     price: "R40.00",
     description: "Flavorful cannabis jelly treats for a mellow high.",
     mainImage: "/sales/edibles/jelly1.webp",
-    images: ["/sales/edibles/jelly.webp"]
+    images: ["/sales/edibles/jelly.webp","/sales/edibles/jelly1.webp"]
   },
   {
     id: 25,
@@ -197,7 +197,7 @@ const products = [
     price: "R10.00",
     description: "Reliable lighter for all your smoking needs.",
     mainImage: "/sales/sun/sun.jpg",
-    images: ["/sales/lighter/lighter.webp"]
+    images: ["/sales/lighter/lighter.webp","/sales/sun/sun.jpg"]
   },
   {
     id: 26,
@@ -221,7 +221,7 @@ const products = [
     price: "R15.00",
     description: "Branded pre-rolled holder to keep your joints fresh and safe.",
     mainImage: "/sales/holder.jpg",
-    images: ["/sales/holder.jpg"]
+    images: ["/sales/holder.jpg","/sales/holder.jpg"]
   },
   {
     id: 29,
@@ -229,7 +229,7 @@ const products = [
     price: "R60.00",
     description: "Replacement hookah heads compatible with most pipes.",
     mainImage: "/sales/head1.jpg",
-    images: ["/sales/head.jpg"]
+    images: ["/sales/head.jpg","/sales/head1.jpg"]
   },
   {
     id: 30,
@@ -237,7 +237,7 @@ const products = [
     price: "From R30.00",
     description: "Stylish and functional trays for hookah and accessories.",
     mainImage: "/sales/tray3.avif",
-    images: ["/sales/tray2.jpeg", "/sales/tray1.jpeg"]
+    images: ["/sales/tray2.jpeg","/sales/tray1.jpeg"]
   },
   {
     id: 31,
@@ -245,7 +245,7 @@ const products = [
     price: "R2.00",
     description: "Blue Mix (Square) charcoal block ideal for hookahs.",
     mainImage: "/sales/squalcoal1.jpeg",
-    images: ["/sales/squalcoal.jpeg"]
+    images: ["/sales/squalcoal.jpeg","/sales/squalcoal1.jpeg"]
   },
   {
     id: 32,
@@ -253,7 +253,7 @@ const products = [
     price: "R10.00",
     description: "High-quality blue charcoal for smoking sessions.",
     mainImage: "/sales/coal1.jpeg",
-    images: ["/sales/coal.jpeg"]
+    images: ["/sales/coal.jpeg","/sales/coal1.jpeg"]
   },
   {
     id: 33,
@@ -277,7 +277,7 @@ const products = [
     price: "R80.00",
     description: "Premium Pitbull cannabis strain known for its potency and smoothness.",
     mainImage: "/sales/cannabis/Pitbull.jpg",
-    images: ["/sales/cannabis/pit.jpg"]
+    images: ["/sales/cannabis/pit.jpg","/sales/cannabis/buds-dark.jpg"]
   },
   {
     id: 36,
@@ -285,7 +285,7 @@ const products = [
     price: "R60.00",
     description: "Heli Jelly strain offering a relaxing and euphoric experience.",
     mainImage: "/sales/cannabis/indoor.jpg",
-    images: ["/sales/cannabis/indoor_side.jpg"]
+    images: ["/sales/cannabis/indoor_side.jpg","/sales/cannabis/indoor.jpg"]
   },
   {
     id: 37,
@@ -293,7 +293,7 @@ const products = [
     price: "R60.00",
     description: "Dutch Magic is a classic strain with a balanced hybrid effect.",
     mainImage: "/sales/cannabis/dutchmagic.jpg",
-    images: ["/sales/cannabis/weed.jpg"]
+    images: ["/sales/cannabis/weed.jpg","/sales/cannabis/dutchmagic.jpg"]
   },
   {
     id: 38,
@@ -309,7 +309,7 @@ const products = [
     price: "R60.00",
     description: "Pop Tarts strain with dessert-like flavor and mellow effects.",
     mainImage: "/sales/cannabis/poptarts.jpg",
-    images: ["/sales/cannabis/weed1.jpg"]
+    images: ["/sales/cannabis/weed1.jpg","/sales/cannabis/buds.jpg"]
   },
   {
     id: 40,
@@ -317,7 +317,7 @@ const products = [
     price: "R60.00",
     description: "Fruity and fragrant Purple Grape strain great for relaxation.",
     mainImage: "/sales/cannabis/purple.jpg",
-    images: ["/sales/cannabis/closeup.jpg"]
+    images: ["/sales/cannabis/closeup.jpg","/sales/cannabis/purple.jpg"]
   },
   {
     id: 41,
@@ -325,7 +325,15 @@ const products = [
     price: "R60.00",
     description: "Potent Loud Cake strain, perfect for experienced users.",
     mainImage: "/sales/cannabis/buds-dark.jpg",
-    images: ["/sales/cannabis/loud.jpg"]
+    images: ["/sales/cannabis/loud.jpg","/sales/cannabis/buds-dark.jpg"]
+  },
+  {
+    id: 42,
+    name: "Dead Jack (Per Gram)",
+    price: "R100.00",
+    description: "Dead Jack, perfect for experienced users.",
+    mainImage: "/sales/cannabis/deadjack.jpg",
+    images: ["/sales/cannabis/deadjack2.jpg","/sales/cannabis/buds-dark.jpg"]
   }
 ];
 
