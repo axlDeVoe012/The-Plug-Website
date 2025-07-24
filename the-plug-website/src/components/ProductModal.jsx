@@ -33,18 +33,18 @@ const ProductModal = ({ product, onClose }) => {
             </div>
 
             {product.images?.length > 1 && (
-              <div className="d-flex gap-2 flex-wrap justify-content-center">
-                {product.images.map((img, idx) => (
-                  <img
-                    key={idx}
-                    src={img}
-                    alt={`${product.name} ${idx + 1}`}
-                    className={`thumbnail ${selectedImage === img ? 'active' : ''}`}
-                    onClick={() => setSelectedImage(img)}
-                  />
-                ))}
-              </div>
-            )}
+            <div className="thumbnail-gallery">
+              {product.images.map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  alt={`${product.name} ${idx + 1}`}
+                  className={`thumbnail ${selectedImage === img ? 'active' : ''}`}
+                  onClick={() => setSelectedImage(img)}
+                />
+              ))}
+            </div>
+          )}
           </div>
 
           {/* Product Details */}

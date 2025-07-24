@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/Contact.css';
 import leaf from '../assets/leaf.png';
+import '../index.css';
 
 const Contact = () => {
   const form = useRef();
@@ -37,28 +38,60 @@ const Contact = () => {
         <h2 className="contact-heading">Let's Connect</h2>
         <p className="text-muted">Drop us a message about products, partnerships, or sneaker care.</p>
       </div>
+<form ref={form} onSubmit={sendEmail} className="contact-form mx-auto">
+  <div className="mb-3">
+    <label htmlFor="user_name" className="form-label">Name</label>
+    <input
+      id="user_name"
+      type="text"
+      name="user_name"
+      className="form-control rounded-pill"
+      required
+      placeholder="Enter your name"
+    />
+  </div>
 
-      <form ref={form} onSubmit={sendEmail} className="contact-form mx-auto">
-        <div className="mb-3">
-          <label className="form-label">Name</label>
-          <input type="text" name="user_name" className="form-control rounded-pill" required />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Title</label>
-          <input type="text" name="user_title" className="form-control rounded-pill" required />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Email</label>
-          <input type="email" name="user_email" className="form-control rounded-pill" required />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Message</label>
-          <textarea name="message" className="form-control rounded-4" rows="4" required></textarea>
-        </div>
-        <div className="text-center">
-          <button type="submit" className="btn btn-success px-4 rounded-pill">Send 🌿</button>
-        </div>
-      </form>
+  <div className="mb-3">
+    <label htmlFor="user_title" className="form-label">Title</label>
+    <input
+      id="user_title"
+      type="text"
+      name="user_title"
+      className="form-control rounded-pill"
+      required
+      placeholder="Enter your title"
+    />
+  </div>
+
+  <div className="mb-3">
+    <label htmlFor="user_email" className="form-label">Email</label>
+    <input
+      id="user_email"
+      type="email"
+      name="user_email"
+      className="form-control rounded-pill"
+      required
+      placeholder="Enter your email"
+    />
+  </div>
+
+  <div className="mb-3">
+    <label htmlFor="message" className="form-label">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      className="form-control rounded-4"
+      rows="4"
+      required
+      placeholder="Write your message here"
+    ></textarea>
+  </div>
+
+  <div className="text-center">
+    <button type="submit" className="btn btn-success px-4 rounded-pill">Send 🌿</button>
+  </div>
+</form>
+
     </div>
   );
 };
