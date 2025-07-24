@@ -168,7 +168,7 @@ const Education = () => {
       </section>
 
       <section aria-label="Cannabis Strains" style={{ marginTop: '2rem' }}>
-        <h2 className="section-heading">Strain Information</h2>
+        <h2 className="section-heading">Our Strains</h2>
         {strains.map((strain, index) => (
           <div key={index}>
             <button
