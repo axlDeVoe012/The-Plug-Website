@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .strain-section {
   margin-top: 1rem;
   border-top: 1px dashed rgba(134, 239, 172, 0.3);
@@ -8,43 +7,6 @@
 .strain-toggle {
   width: 100%;
   background: none;
-=======
-/* Education.css */
-
-/* Container Styling */
-.education-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom, #064e3b, #000);
-  color: #e6ffe6;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%; /* Cross-browser font sizing */
-}
-
-/* Optional: Background Cannabis Image */
-.education-container::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('/images/cannabis-bg.jpg') no-repeat center center / cover;
-  opacity: 0.07;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* Section Title */
-.education-title {
-  font-size: 2.75rem;
-  font-weight: 800;
-  text-align: center;
-  text-align: -webkit-center;
->>>>>>> 4d51cc08615e7fc42e9735fcf081a1199e1d8db2
   color: #bbf7d0;
   font-size: 1.15rem;
   font-weight: 600;
@@ -59,44 +21,7 @@
   border-left: 4px solid transparent;
 }
 
-<<<<<<< HEAD
 .strain-toggle:hover {
-=======
-/* Subtitle */
-.education-subtitle {
-  font-size: 1.1rem;
-  text-align: center;
-  text-align: -webkit-center;
-  color: #cbd5e1;
-  margin: 0 auto 2.5rem auto;
-  max-width: 700px;
-}
-
-/* Card Styling */
-.education-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1.25rem;
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  /* Backdrop blur (cross-browser) */
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-/* Hover Effects */
-.education-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
-
-/* Card Title */
-.education-card h2 {
-  font-size: 1.75rem;
->>>>>>> 4d51cc08615e7fc42e9735fcf081a1199e1d8db2
   color: #86efac;
   border-left: 4px solid #22c55e;
   background-color: rgba(34, 197, 94, 0.1);
@@ -104,14 +29,7 @@
   padding-left: 0.5rem;
 }
 
-<<<<<<< HEAD
 .arrow {
-=======
-/* Card Text */
-.education-card p {
-  color: #d1fae5;
-  line-height: 1.6;
->>>>>>> 4d51cc08615e7fc42e9735fcf081a1199e1d8db2
   font-size: 1rem;
   color: #86efac;
   transition: transform 0.3s;
@@ -137,37 +55,4 @@
 .strains-card {
   border: 1px solid rgba(34, 197, 94, 0.25);
   box-shadow: 0 0 12px rgba(34, 197, 94, 0.15);
-}
-
-/* Slideshow Wrapper with Cross-browser Blur */
-.slideshow-wrapper {
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-
-/* Form Input Fixes for Cross-Browser Color Adjust */
-.form-check-input {
-  print-color-adjust: exact;
-  -webkit-print-color-adjust: exact; /* Chrome, Safari, Edge */
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-/* Responsive Typography */
-@media (max-width: 768px) {
-  .education-title {
-    font-size: 2rem;
-  }
-
-  .education-subtitle {
-    font-size: 1rem;
-  }
-
-  .education-card h2 {
-    font-size: 1.5rem;
-  }
-
-  .education-card p {
-    font-size: 0.95rem;
-  }
 }

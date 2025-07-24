@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/Education.css';
 
-<<<<<<< HEAD
 const strainsData = [
   {
     name: '🌿 Pitbull',
@@ -76,7 +75,6 @@ const strainsData = [
 ];
 
 
-
 const Education = () => {
   const [openStrain, setOpenStrain] = useState(null);
 
@@ -93,67 +91,36 @@ const Education = () => {
 
       {/* Educational Cards */}
       <div className="education-card">
-=======
-const Education = () => (
-  <main className="education-container" role="main">
-    <header>
-      <h1 className="education-title">Cannabis Education</h1>
-      <p className="education-subtitle">
-        Learn about cannabis, its uses, effects, and how to consume responsibly.
-        Whether you’re new or experienced, this page helps you make informed choices.
-      </p>
-    </header>
-
-    <section aria-label="Educational Content">
-      <article className="education-card">
->>>>>>> 4d51cc08615e7fc42e9735fcf081a1199e1d8db2
         <h2>What is Cannabis?</h2>
         <p>
           Cannabis is a plant that contains compounds called cannabinoids—mainly THC and CBD. It's used for relaxation, pain relief, anxiety, and other therapeutic or recreational benefits.
         </p>
-      </article>
+      </div>
 
-      <article className="education-card">
+      <div className="education-card">
         <h2>THC vs. CBD</h2>
         <p>
-<<<<<<< HEAD
           <strong>THC</strong> is psychoactive and produces a "high" effect. <strong>CBD</strong> is non-psychoactive and promotes calmness and relief from inflammation, anxiety, and pain.
-=======
-          <strong>THC</strong> is the psychoactive compound that gives the “high” feeling.
-          <strong> CBD</strong> is non-psychoactive and known for its calming and pain-relieving properties.
-          Products vary in ratio depending on the experience you’re looking for.
->>>>>>> 4d51cc08615e7fc42e9735fcf081a1199e1d8db2
         </p>
-      </article>
+      </div>
 
-      <article className="education-card">
+      <div className="education-card">
         <h2>Ways to Use Cannabis</h2>
         <p>
-<<<<<<< HEAD
           You can smoke, vape, eat, or apply cannabis. Edibles take longer to kick in, while vaping and smoking work quickly. Each method affects the body differently.
-=======
-          Cannabis can be smoked, vaped, eaten (as edibles), applied as topicals, or taken sublingually.
-          Each method has a different onset time and effect duration.
->>>>>>> 4d51cc08615e7fc42e9735fcf081a1199e1d8db2
         </p>
-      </article>
+      </div>
 
-      <article className="education-card">
+      <div className="education-card">
         <h2>Responsible Use</h2>
         <p>
-<<<<<<< HEAD
           Start low and go slow, especially with edibles or new strains. Never drive high and always follow local laws. Know your tolerance and choose safe environments.
-=======
-          Start low, go slow. Especially with edibles and new strains, it's important to begin with a small dose and wait before consuming more.
-          Always follow local laws and avoid driving or operating machinery while under the influence.
->>>>>>> 4d51cc08615e7fc42e9735fcf081a1199e1d8db2
         </p>
-      </article>
+      </div>
 
-      <article className="education-card">
+      <div className="education-card">
         <h2>Is Cannabis Legal?</h2>
         <p>
-<<<<<<< HEAD
           In South Africa, adults may use cannabis privately. However, commercial sale is restricted unless licensed. Always stay up to date with changing laws.
         </p>
       </div>
@@ -221,15 +188,5 @@ const Education = () => (
     </div>
   );
 };
-=======
-          In South Africa, cannabis is legal for personal use by adults in private spaces.
-          It remains illegal to sell cannabis commercially without proper licenses.
-          Always stay informed about evolving local laws.
-        </p>
-      </article>
-    </section>
-  </main>
-);
->>>>>>> 4d51cc08615e7fc42e9735fcf081a1199e1d8db2
 
 export default Education;
