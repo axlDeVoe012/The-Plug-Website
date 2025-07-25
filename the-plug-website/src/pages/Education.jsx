@@ -5,12 +5,12 @@ const educationTopics = [
   {
     title: 'What is Cannabis?',
     content:
-      "Cannabis is a plant that contains compounds called cannabinoids—mainly THC and CBD. It's used for relaxation, pain relief, anxiety, and other therapeutic or recreational benefits.",
+      "Cannabis is a naturally growing plant that contains powerful compounds called cannabinoids. These compounds interact with your body to produce a range of effects from relaxation and pain relief to creative boosts and deep sleep.",
   },
   {
     title: 'THC vs. CBD',
     content:
-      'THC is psychoactive and produces a "high" effect. CBD is non-psychoactive and promotes calmness and relief from inflammation, anxiety, and pain.',
+      "THC: (Tetrahydrocannabinol) is the compound responsible for the psychoactive effects of cannabis what most people call the high. CBD is non-psychoactive and promotes calmness and relief from inflammation, anxiety, and pain. Effects of THC: Euphoria or a feel-good buzz Enhanced. senses and creativity. CBD(Cannabidiol) is non-psychoactive, meaning it won’t get you high. It’s popular for promoting relaxation, focus, and relief without the buzz. Effects of CBD: Calming and soothing, Reduces anxiety and tension.",
   },
   {
     title: 'Ways to Use Cannabis',
@@ -152,6 +152,7 @@ const Education = () => {
         {educationTopics.map((topic, index) => (
           <div key={index}>
             <button
+              type="button"
               className="collapsible-trigger"
               aria-expanded={openIndex === index}
               onClick={() => toggleSection(index)}
@@ -172,6 +173,7 @@ const Education = () => {
         {strains.map((strain, index) => (
           <div key={index}>
             <button
+              type="button"
               className="collapsible-trigger"
               aria-expanded={openIndex === `strain-${index}`}
               onClick={() => toggleSection(`strain-${index}`)}
