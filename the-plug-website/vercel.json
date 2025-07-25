@@ -9,5 +9,8 @@
         { "key": "Permissions-Policy", "value": "geolocation=()" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
   ]
 }
