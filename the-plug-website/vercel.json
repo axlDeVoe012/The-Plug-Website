@@ -1,4 +1,10 @@
 {
+  "builds": [
+    { "src": "dist/**", "use": "@vercel/static" }
+  ],
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -9,8 +15,5 @@
         { "key": "Permissions-Policy", "value": "geolocation=()" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
   ]
 }
