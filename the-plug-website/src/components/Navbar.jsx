@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 const Navbar = () => {
   const [darkMode, setDarkMode] = useState(() => localStorage.getItem('darkMode') === 'true');
+  const [isExpanded, setIsExpanded] = useState(false);
 
   // Apply dark mode class on mount and toggle
   useEffect(() => {
@@ -16,15 +17,32 @@ const Navbar = () => {
   // Auto-collapse navbar when user scrolls
   useEffect(() => {
     const handleScroll = () => {
-      const navbarCollapse = document.getElementById('navbarNav');
-      if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-        const bsCollapse = new window.bootstrap.Collapse(navbarCollapse, { toggle: false });
-        bsCollapse.hide(); // Manually collapse the nav
+      if (isExpanded) {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
+          navbarToggler.click(); // Simulate click to close the navbar
+          setIsExpanded(false);
+        }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
+  }, [isExpanded]);
+
+  // Track navbar collapse/expand state
+  useEffect(() => {
+    const navbar = document.getElementById('navbarNav');
+    const handleShowEvent = () => setIsExpanded(true);
+    const handleHideEvent = () => setIsExpanded(false);
+
+    navbar?.addEventListener('shown.bs.collapse', handleShowEvent);
+    navbar?.addEventListener('hidden.bs.collapse', handleHideEvent);
+
+    return () => {
+      navbar?.removeEventListener('shown.bs.collapse', handleShowEvent);
+      navbar?.removeEventListener('hidden.bs.collapse', handleHideEvent);
+    };
   }, []);
 
   return (
@@ -43,7 +61,7 @@ const Navbar = () => {
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
-          aria-expanded="false"
+          aria-expanded={isExpanded}
           aria-label="Toggle navigation"
           title="Toggle navigation"
         >

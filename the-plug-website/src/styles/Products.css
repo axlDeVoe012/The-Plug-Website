@@ -1,124 +1,89 @@
-/* ------------------------------
-   Product Image
------------------------------- */
-.product-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: relative;
-  z-index: 1;
-  transition: transform 0.3s ease;
+.product-card {
+  border-radius: 1rem;
+  background: #1e1e1e;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover .product-image {
+.product-card:hover {
+  transform: scale(1.015);
+  box-shadow: 0 10px 25px rgba(0, 255, 170, 0.1);
+}
+
+.product-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+
+.product-card:hover .product-image {
   transform: scale(1.05);
 }
 
-/* ------------------------------
-   Hover Overlay
------------------------------- */
 .hover-overlay {
   position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #e6f4ea;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
   padding: 1rem;
-  z-index: 2;
-  pointer-events: none;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  backdrop-filter: blur(1px);
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
 }
 
-.card:hover .hover-overlay {
-  opacity: 1;
-  pointer-events: auto;
+.product-card:hover .hover-overlay {
+  transform: translateY(0);
 }
 
-/* ------------------------------
-   Floating Price Tag
------------------------------- */
 .floating-price {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  color: white;
-  padding: 5px 12px;
-  border-radius: 20px;
+  top: 1rem;
+  right: 1rem;
+  
+  
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
   font-weight: bold;
-  font-size: 0.85rem;
-  z-index: 3;
-  -webkit-user-select: none; /* Safari 3+ */
-  user-select: none;
+  font-size: 0.9rem;
+  color:lightblue;
 }
 
 .floating-price.coming-soon {
-  background-color: #dc3545;
-  color: #fff;
-  font-weight: 700;
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff6a6a;
 }
 
-/* ------------------------------
-   Button Animation
------------------------------- */
 .animate-btn {
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
 }
 
 .animate-btn:hover {
-  transform: scale(1.05);
-  background-color: #7af0bb;
-  color: #142d1a;
-  border-color: #7af0bb;
+  background-color: #00ffaa;
+  color: #000;
+  transform: scale(1.03);
 }
 
-/* ------------------------------
-   Badge Styling
------------------------------- */
-.badge {
-  font-size: 0.75rem;
-  padding: 0.4em 0.7em;
-  border-radius: 0.5rem;
-  z-index: 3;
+.card.product-card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-/* ------------------------------
-   Dark Mode Support
------------------------------- */
-body.dark-mode {
-  background-color: #0a1f14;
-  color: #e6f4ea;
+input.form-control {
+  border-radius: 2rem;
+  padding: 0.7rem 1.2rem;
+  background: #2c2c2c;
+  border: none;
+  color: #fff;
 }
 
-body.dark-mode .card {
-  background-color: #142d1a !important;
-  color: #e6f4ea;
-}
-
-body.dark-mode .btn-outline-success {
-  border-color: #7af0bb;
-  color: #7af0bb;
-}
-
-body.dark-mode .btn-outline-success:hover {
-  background-color: #7af0bb;
-  color: #142d1a;
-}
-
-body.dark-mode input.form-control {
-  background-color: #0e2b20;
-  color: #e6f4ea;
-  border: 1px solid #7af0bb;
-}
-
-/* ------------------------------
-   Form Elements (Fix for color-adjust warning)
------------------------------- */
-.form-check-input {
-  print-color-adjust: exact; /* Replaces deprecated color-adjust */
-  -webkit-print-color-adjust: exact; /* Chrome, Safari, Edge */
+input.form-control::placeholder {
+  color: #bbb;
 }

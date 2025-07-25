@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import '../styles/Contact.css';
-import leaf from '../assets/leaf.png';
+import leaf from '../assets/logo1.png';
 import '../index.css';
 
 const Contact = () => {
